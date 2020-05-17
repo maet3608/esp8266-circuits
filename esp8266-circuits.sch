@@ -1,0 +1,339 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A0 46811 33110
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L My_Library:ESP8266-12E U?
+U 1 1 5EC0C337
+P 2825 2550
+F 0 "U?" H 2800 3265 50  0000 C CNN
+F 1 "ESP8266-12E" H 2800 3174 50  0000 C CNN
+F 2 "" H 2825 3700 50  0001 C CNN
+F 3 "" H 2825 3700 50  0001 C CNN
+	1    2825 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Female J?
+U 1 1 5EC0EC4E
+P 4150 2150
+F 0 "J?" H 4025 2500 50  0000 L CNN
+F 1 "UART" H 3975 2400 50  0000 L CNN
+F 2 "" H 4150 2150 50  0001 C CNN
+F 3 "~" H 4150 2150 50  0001 C CNN
+	1    4150 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 2150 3625 2250
+Wire Wire Line
+	3625 2150 3750 2250
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 5EC140E1
+P 3675 2550
+F 0 "SW?" H 3675 2785 50  0000 C CNN
+F 1 "Flash" H 3675 2694 50  0000 C CNN
+F 2 "" H 3675 2550 50  0001 C CNN
+F 3 "~" H 3675 2550 50  0001 C CNN
+	1    3675 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3375 2550 3475 2550
+Wire Wire Line
+	3375 2150 3625 2150
+Wire Wire Line
+	3375 2250 3625 2250
+$Comp
+L power:GND #PWR?
+U 1 1 5EC177AF
+P 3950 3125
+F 0 "#PWR?" H 3950 2875 50  0001 C CNN
+F 1 "GND" H 3955 2952 50  0000 C CNN
+F 2 "" H 3950 3125 50  0001 C CNN
+F 3 "" H 3950 3125 50  0001 C CNN
+	1    3950 3125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3950 2350 3950 2550
+Wire Wire Line
+	3375 2850 3950 2850
+Connection ~ 3950 2850
+Wire Wire Line
+	3950 2850 3950 3125
+Wire Wire Line
+	3875 2550 3950 2550
+Connection ~ 3950 2550
+Wire Wire Line
+	3950 2550 3950 2750
+Wire Wire Line
+	3750 2150 3950 2150
+Wire Wire Line
+	3750 2250 3950 2250
+Text Notes 4200 2175 0    39   ~ 0
+TX
+Text Notes 4200 2275 0    39   ~ 0
+RX
+Wire Wire Line
+	3950 2050 3850 2050
+Wire Wire Line
+	1625 2850 1625 2350
+Text Notes 4200 2075 0    39   ~ 0
+3V3
+Text Notes 4200 2375 0    39   ~ 0
+GND
+$Comp
+L Device:R R?
+U 1 1 5EC1D535
+P 1975 2350
+F 0 "R?" V 1875 2350 50  0000 C CNN
+F 1 "10K" V 1975 2350 50  0000 C CNN
+F 2 "" V 1905 2350 50  0001 C CNN
+F 3 "~" H 1975 2350 50  0001 C CNN
+	1    1975 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2225 2350 2125 2350
+Connection ~ 1625 2350
+Wire Wire Line
+	1625 2350 1625 1725
+$Comp
+L Device:R R?
+U 1 1 5EC1E345
+P 3625 2750
+F 0 "R?" V 3525 2750 50  0000 C CNN
+F 1 "10K" V 3625 2750 50  0000 C CNN
+F 2 "" V 3555 2750 50  0001 C CNN
+F 3 "~" H 3625 2750 50  0001 C CNN
+	1    3625 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3375 2750 3475 2750
+Wire Wire Line
+	3775 2750 3950 2750
+Connection ~ 3950 2750
+Wire Wire Line
+	3950 2750 3950 2850
+Text Notes 2475 1500 0    79   ~ 0
+Flash or Run
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 5EC1F9B2
+P 1950 2150
+F 0 "SW?" H 1950 2385 50  0000 C CNN
+F 1 "Deep sleep" H 1950 2294 50  0000 C CNN
+F 2 "" H 1950 2150 50  0001 C CNN
+F 3 "~" H 1950 2150 50  0001 C CNN
+	1    1950 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1625 2350 1825 2350
+Wire Wire Line
+	1625 2850 2225 2850
+Wire Wire Line
+	1625 1725 3850 1725
+Wire Wire Line
+	3850 1725 3850 2050
+Wire Wire Line
+	2225 2450 1750 2450
+Wire Wire Line
+	1750 2450 1750 2150
+Wire Wire Line
+	2150 2150 2225 2150
+Text Notes 6200 1850 0    79   ~ 0
+Battery powered
+$Comp
+L Device:Battery_Cell BT?
+U 1 1 5EC26902
+P 5925 2950
+F 0 "BT?" H 5550 3100 50  0000 L CNN
+F 1 "LiPo 4.2V" H 5425 2975 50  0000 L CNN
+F 2 "" V 5925 3010 50  0001 C CNN
+F 3 "~" V 5925 3010 50  0001 C CNN
+	1    5925 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:HT75xx-1-SOT89 U?
+U 1 1 5EC276E9
+P 6975 2550
+F 0 "U?" H 6975 2917 50  0000 C CNN
+F 1 "HT7333-A" H 6975 2826 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 6975 2875 50  0001 C CIN
+F 3 "https://www.holtek.com/documents/10179/116711/HT75xx-1v250.pdf" H 6975 2650 50  0001 C CNN
+	1    6975 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5EC27C5A
+P 6500 2800
+F 0 "C?" H 6250 2850 50  0000 L CNN
+F 1 "10uF" H 6200 2750 50  0000 L CNN
+F 2 "" H 6538 2650 50  0001 C CNN
+F 3 "~" H 6500 2800 50  0001 C CNN
+	1    6500 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5EC29C89
+P 7450 2775
+F 0 "C?" H 7625 2825 50  0000 L CNN
+F 1 "10uF" H 7568 2730 50  0000 L CNN
+F 2 "" H 7488 2625 50  0001 C CNN
+F 3 "~" H 7450 2775 50  0001 C CNN
+	1    7450 2775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7275 2450 7450 2450
+Wire Wire Line
+	7450 2450 7450 2625
+$Comp
+L power:GND #PWR?
+U 1 1 5EC2B3E3
+P 6975 3325
+F 0 "#PWR?" H 6975 3075 50  0001 C CNN
+F 1 "GND" H 6980 3152 50  0000 C CNN
+F 2 "" H 6975 3325 50  0001 C CNN
+F 3 "" H 6975 3325 50  0001 C CNN
+	1    6975 3325
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EC2F4BC
+P 5925 3325
+F 0 "#PWR?" H 5925 3075 50  0001 C CNN
+F 1 "GND" H 5930 3152 50  0000 C CNN
+F 2 "" H 5925 3325 50  0001 C CNN
+F 3 "" H 5925 3325 50  0001 C CNN
+	1    5925 3325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 2650 6500 2450
+Wire Wire Line
+	5925 2450 6500 2450
+Connection ~ 6500 2450
+Wire Wire Line
+	6500 2450 6675 2450
+Wire Wire Line
+	6500 2950 6500 3025
+Wire Wire Line
+	5925 2450 5925 2750
+Wire Wire Line
+	7450 3025 7450 2925
+Wire Wire Line
+	5925 3050 5925 3325
+Wire Wire Line
+	6975 2750 6975 3025
+Wire Wire Line
+	6500 3025 6975 3025
+Connection ~ 6975 3025
+Wire Wire Line
+	6975 3025 6975 3325
+Wire Wire Line
+	6975 3025 7450 3025
+Connection ~ 7450 2450
+Connection ~ 9625 2450
+Wire Wire Line
+	9625 2450 9625 2900
+Wire Wire Line
+	9250 2450 9625 2450
+Wire Wire Line
+	9625 2350 9625 2450
+Wire Wire Line
+	9250 2350 9325 2350
+$Comp
+L power:GND #PWR?
+U 1 1 5EC39018
+P 9625 2900
+F 0 "#PWR?" H 9625 2650 50  0001 C CNN
+F 1 "GND" H 9630 2727 50  0000 C CNN
+F 2 "" H 9625 2900 50  0001 C CNN
+F 3 "" H 9625 2900 50  0001 C CNN
+	1    9625 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5EC35498
+P 9475 2350
+F 0 "R?" V 9375 2350 50  0000 C CNN
+F 1 "10K" V 9475 2350 50  0000 C CNN
+F 2 "" V 9405 2350 50  0001 C CNN
+F 3 "~" H 9475 2350 50  0001 C CNN
+	1    9475 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L My_Library:ESP8266-12E U?
+U 1 1 5EC23FB3
+P 8700 2150
+F 0 "U?" H 8675 2865 50  0000 C CNN
+F 1 "ESP8266-12E" H 8675 2774 50  0000 C CNN
+F 2 "" H 8700 3300 50  0001 C CNN
+F 3 "" H 8700 3300 50  0001 C CNN
+	1    8700 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 1750 8100 1325
+Wire Wire Line
+	8100 1325 7900 1325
+$Comp
+L Switch:SW_SPST SW?
+U 1 1 5EC5829B
+P 7900 1525
+F 0 "SW?" V 7950 1775 50  0000 R CNN
+F 1 "Deep sleep" V 7850 2000 50  0000 R CNN
+F 2 "" H 7900 1525 50  0001 C CNN
+F 3 "~" H 7900 1525 50  0001 C CNN
+	1    7900 1525
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7725 1950 7725 2025
+$Comp
+L Device:R R?
+U 1 1 5EC34D06
+P 7725 2175
+F 0 "R?" V 7625 2175 50  0000 C CNN
+F 1 "10K" V 7725 2175 50  0000 C CNN
+F 2 "" V 7655 2175 50  0001 C CNN
+F 3 "~" H 7725 2175 50  0001 C CNN
+	1    7725 2175
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7725 2450 8100 2450
+Wire Wire Line
+	7450 2450 7725 2450
+Connection ~ 7725 2450
+Wire Wire Line
+	7725 2325 7725 2450
+Wire Wire Line
+	7725 1950 8100 1950
+Wire Wire Line
+	7900 1725 7900 2050
+Wire Wire Line
+	7900 2050 8100 2050
+$EndSCHEMATC
